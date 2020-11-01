@@ -1,0 +1,22 @@
+{% extends 'web/Base.html' %}
+{% load static %}
+
+{% block contenedor %}
+    <div style="margin-top: 20px; background-color: chocolate ;" >
+                <form action="{% url 'LOGIN' %}" method="POST" class="Formulario">
+                    {% csrf_token %}
+                    <h2 class="form-titulo">Login de Acceso</h2>
+                    <div id="contenedor de inputs">
+                        <input type="text" name="nombreuser" placeholder="ingrese nombre usuario"  required>
+                        <input type="password" name="contrasena" placeholder="ingrese contraseña" required>
+                        <input type="submit" value="registrar">
+
+                    </div>
+                </form>
+
+            </div>
+
+            <div style="text-align: center; color: chocolate; font-size: 25px;">
+                {{msg}}
+            </div>
+{% endblock contenedor %}

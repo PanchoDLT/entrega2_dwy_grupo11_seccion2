@@ -1,0 +1,74 @@
+{% extends 'web/Base.html' %}
+{% load static %}
+
+{% block contenedor %}
+    <div id=contenido>
+            <div id="base"></div>
+            <h1> <center>Nuestros servicios</center> </h1>
+
+            <div id="ContenidoBase">
+
+                <div class="tarjeta" style="width: 39rem;">
+                    <img src="{% static 'img/lavadointerior.jpg' %}" class="fototarjeta" alt="...">
+                    <div class="cuerpotarjeta">
+                        <h2 class="titulotarjeta">Lavado Interior</h2>
+                        <p class="textotarjeta">
+                            <h4>Servicios</h4>
+                            - Aspirado Interior. $3.000 <br>
+                            - Limpieza interior de vidrios y espejos. $1.000<br>
+                            - Aspirado de maleta. $1.500 <br>
+                            - Pulido de manubrio y zona interior. $2.000 <br>
+                            - Limpieza de gomas. $3.000 <br>
+                            - Pack aromitazantes. $2.000 <br>
+                            - Precio full Interior. $7.000 
+                        </p>
+                    </div>
+                    <img src="{% static 'img/lavadointerior2.jpg' %}" class="fototarjeta" alt="">
+                </div>
+                
+                <div class="tarjeta" style="width: 39rem;">
+                    <img src="{% static 'img/lavadoexterior.jpg' %}" class="fototarjeta" alt="...">
+                    <div class="cuerpotarjeta">
+                        <h2 class="titulotarjeta">Lavado Exterior</h2>
+                        <p class="textotarjeta">
+                            <h4>Servicios</h4>
+                            - Limpieza de vidrios y espejos exterior. $1.000 <br> 
+                            - Encerado de Auto. $3.000 <br>
+                            - Renovador de gomas en neumáticos. $12.000 <br>
+                            - Limpieza y pulido de luces delanteras $1.500 <br>
+                            - Limpieza y pulido de luces traseras $1.500 <br>
+                            - Limpieza de Neumáticos $2.000 <br>
+                            - Precio full Exterior. $17.500 
+                        </p>
+                    </div>
+                    
+                    <img src="{% static 'img/lavadoexterior2.jpg' %}" class="fototarjeta" alt="">
+                </div>
+                
+            </div>
+
+                <h1> <center>Clientes Felices</center> </h1>
+                <div class="cliente" >
+                    <h3>Esteban Quito</h3>
+                    <img src="{% static 'img/cliente1.jpg' %}" alt="">
+                    <li>El auto me quedo demasiado limpio, crei que quedaria sucio de mi viaje a Tacna</li>
+    
+                </div>
+                <div class="cliente">
+                    <h3>Aquiles Brinco</h3>
+                    <img src="{% static 'img/cliente2.jpg' %}" alt="">
+                    <li>Excelente servicio, podia ver mi propio reflejo en el auto!</li>
+    
+                </div>
+                <div class="cliente">
+                    <h3>Edith Campos</h3>
+                    <img src="{% static 'img/cliente3.jpg' %}" alt="">
+                    <li>Nunca vi tan reluciente el interior de mi auto!</li>
+    
+                </div>
+            
+        </div>
+{% endblock contenedor %}
+        
+        
+        

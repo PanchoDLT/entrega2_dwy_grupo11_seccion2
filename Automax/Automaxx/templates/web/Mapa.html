@@ -1,0 +1,27 @@
+{% extends 'web/Base.html' %}
+{% load static %}
+
+{% block contenedor %}
+    <div id=contenido>
+           <div id="miChanchi">
+            <br><br>
+            <h3> Ubicación </h3>
+ 
+            <br>
+ 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d53240.22379325922!2d-70.60721405216051!3d-33.48800214920427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x9662c5126a5075fd%3A0x9790e5d7de9a0354!2sAutolavado%20-%20Av.%20Las%20Rejas%20Sur%20389%2C%20Santiago%2C%20Estaci%C3%B3n%20Central%2C%20Regi%C3%B3n%20Metropolitana!3m2!1d-33.4613972!2d-70.7054785!5e0!3m2!1ses!2scl!4v1600735073747!5m2!1ses!2scl" width="850" height="700" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+ 
+           </div>
+        </div>   
+
+{% endblock contenedor %}
+
+{% block js %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+{% endblock js %}
+        
+        

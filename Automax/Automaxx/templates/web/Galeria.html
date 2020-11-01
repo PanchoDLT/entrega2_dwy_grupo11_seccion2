@@ -1,0 +1,32 @@
++{% extends 'web/Base.html' %}
+{% load static %}
+
+{% block estilo %}
+<link rel="stylesheet" href="{% static 'dist/css/lightbox.min.css' %}">
+{% endblock estilo %}
+
+{% block contenedor %}
+    <div id=contenido>
+            <div id="galeria">
+                <h1> <center>Galeria Lavado de Automoviles</center> </h1>
+    
+                <div class="galeria">
+                    {% for item in gale %}
+                        <a href="{{item.imagen.url}}" data-lightbox="galeria" data-title="{{item.name}}">
+                            <img src="{{item.imagen.url}}" alt=""/>
+                        </a>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+{% endblock contenedor %}
+
+{% block js %}
+
+<script src="{% static '/dist/js/lightbox-plus-jquery.min.js' %}"></script>
+
+{% endblock js %}
+        
+        
+        

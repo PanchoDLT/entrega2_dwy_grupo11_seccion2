@@ -1,0 +1,118 @@
+{% extends 'web/Base.html' %}
+{% load static %}
+
+{% block js %}
+<script src="{% static 'js/scripts.js' %}"></script>
+{% endblock js %}
+
+{% block contenedor %}
+<div id=contenido>
+    <div id="registro">
+        <h3>Registro:</h3>
+        <form action="" method="POST" onsubmit="return validarTodo()">
+            <table>
+                <tr>
+                    <td>Rut:</td>
+                    <td>
+                        <input type="text" id="txtRut" placeholder="ingrese rut" minlength="1" maxlength="10" required>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="txtNombre" placeholder="Ingrese Nombre" minlength="3" maxlength="80"
+                            required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Apellido:</td>
+                    <td><input type="text" id="txtApellido" placeholder="Ingrese Apellido" minlength="3" maxlength="80"
+                            required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="txtEmail" name="txtEmail" placeholder="Ingrese su Email">
+                    </td>
+                </tr>
+
+                <tr>
+                    <TD>Fecha:</TD>
+                    <td>
+                        <input type="date" name="fecha" id="fecha" class="form-control" placeholder="dd/mm/aaaa"
+                            required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Usuario:</td>
+                    <td><input type="text" id="txtUsuario" name="txtUsuario" placeholder="Ingrese Nombre de Usuario"
+                            minlength="8" required></td>
+                </tr>
+
+                <tr>
+                    <td>Contraseña:</td>
+                    <td><input type="password" name="txtContrasena" id="txtContrasena"
+                            placeholder="Ingrese su Contraseña" minlength="8" required></td>
+                </tr>
+
+                <tr>
+                    <td>Repita Contraseña:</td>
+                    <td><input type="password" name="txtRepetirContrasena" id="txtRepetirContrasena"
+                            placeholder="Vuelva a repetir la contraseña" minlength="8" required></td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpiar">
+                        <button onclick="validarContrasena ()">Validar datos</button>
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+    <div id="ContenedorTarjetas">
+
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'img/asientos.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Interior</h5>
+                <p class="card-text">
+                    - Limpieza de puertas y controles centrales con paño de microfibra <br>
+                    - Limpieza de tableros <br>
+                    - Limpieza de vidrios <br>
+                    - Limpieza de gomas <br>
+                    - Aspirado <br>
+                    - soplado
+                </p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'img/auto.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Exterior</h5>
+                <p class="card-text">
+                    - Lavado con hidro lavadora <br>
+                    - Limpieza de llantas <br>
+                    - Sócalos <br>
+                    - Vidrios <br>
+                    - Neumáticos <br>
+                    - Plásticos exteriores
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock contenedor %}
+

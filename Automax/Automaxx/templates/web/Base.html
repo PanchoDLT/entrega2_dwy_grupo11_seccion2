@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automax</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+
+    {% block estilo %}
+
+    {% endblock estilo %}
+</head>
+
+<body>
+    <div id="contenedor">
+    <div id="nav">
+        <nav>
+            <ol>
+                <ul class="menu">
+                    <li><a href="{% url 'PAGINA_INICIO' %}">Inicio</a></li>
+                    <li><a href="{% url 'QUIENES_SOMOS' %}">Quienes somos</a></li>
+                    <li><a href="{% url 'REGISTRO' %}">Formulario</a></li>
+                    <li><a href="{% url 'REGISTRO_INSUMOS' %}">Registro de insumos</a></li>
+                    <li><a href="{% url 'GALERIA' %}">Galeria</a></li>
+                    <li><a href="{% url 'MAPA' %}">Donde estamos</a></li>
+
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'LOGOUT' %}">Cerrar sesion</a></li>
+                        <li><a href="">Bienvenido: {{user.username}}</a></li>
+                    {% else %}
+                        <li><a href="{% url 'LOGIN' %}">Iniciar sesion</a></li>
+                    {% endif %}
+                </ul>
+            </ol>
+        </nav>
+    </div>
+        
+            <div class="slider" id="titulo">
+                <ul>
+                    <li><img src="{{last.imagen.url}}" alt=""></li>
+                    {% for item in slider %}
+                    <li><img src="{{item.imagen.url}}" alt=""></li>
+                    {% endfor %}
+                    <li><img src="{{first.imagen.url}}" alt=""></li>
+                </ul>
+                
+        </div>
+
+        {% block contenedor %}
+
+        {% endblock contenedor %}
+        
+        <div id="nav">
+            <nav>
+                <ol>
+                    <ul class="footer">
+                        <li><a href="{% url 'PAGINA_INICIO' %}">Inicio</a></li>
+                        <li><a href="{% url 'QUIENES_SOMOS' %}">Quienes somos</a></li>
+                        <li><a href="{% url 'REGISTRO' %}">Formulario</a></li>
+                        <li><a href="{% url 'REGISTRO_INSUMOS' %}">Registro de insumos</a></li>
+                        <li><a href="{% url 'GALERIA' %}">Galeria</a></li>
+                        <li><a href="{% url 'MAPA' %}">Donde estamos</a></li>
+                        <h4>Contactanos : +56 2 9578934 </h4>
+                        <h4>Facebook/Automax</h4>
+                    </ul>
+                </ol>
+            </nav>
+        </div>
+
+    </div>
+    {%  block js %}
+
+    {%  endblock js %}
+</body>
+
+
+
+</html>

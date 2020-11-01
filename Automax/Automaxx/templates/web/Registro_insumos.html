@@ -1,0 +1,70 @@
+{% extends 'web/Base.html' %}
+{% load static %}
+
+{% block contenedor %}
+    <div id=contenido>
+            <div id="FormularioInsumos">
+                <h3> <center>Formulario Insumos</center> </h3>
+                <form action="" method="POST">
+                    <table>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" id="txtNombreInsumo" placeholder="Ingrese Nombre" minlength="3" maxlength="120" required></td>
+                        </tr>
+                        <tr>
+                            <td>Precio</td>
+                            <td>
+                                <input type="number" id="txtPrecio" placeholder="Ingrese Precio" min="1" required>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Descripcion</td>
+                            <td><input type="text" id="txtDescripcion" placeholder="Ingrese Descripcion (opcional)" minlength="3" maxlength="120"></td>
+                        </tr>
+                        <tr>
+                            <input type="submit" value="Enviar">
+                            <input type="reset" value="Limpiar">
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <div id="ContenedorTarjetas">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/asientos.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Interior</h5>
+                        <p class="card-text">
+                            - Limpieza de puertas y controles centrales con paño de microfibra <br>
+                            - Limpieza de tableros <br>
+                            - Limpieza de vidrios <br>
+                            - Limpieza de gomas <br>
+                            - Aspirado <br>
+                            - soplado
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/auto.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Exterior</h5>
+                        <p class="card-text">
+                            - Lavado con hidro lavadora <br> 
+                            - Limpieza de llantas <br>
+                            - Sócalos <br>
+                            - Vidrios <br>
+                            - Neumáticos <br>
+                            - Plásticos exteriores 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+{% endblock contenedor %}
+        
+        
+        
